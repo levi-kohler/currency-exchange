@@ -12,3 +12,11 @@ function getElements(response) {
   }
 }
 
+$(document).ready(function() {
+  $('#GBP').click(function() {
+    Converter.getConversion(currency)
+    .then(function(response) {
+      getElements(response);
+    });
+  });
+});
