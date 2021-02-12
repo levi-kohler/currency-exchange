@@ -6,7 +6,7 @@ import Converter from './js/converter.js';
 
 function displayConversion(response) {
   if (response) {
-    $('.showTotal').text(`The total in GBP is ${response.conversion_result}`);
+    $('.showTotal').text(`The total in GBP is ${response.result}`);
   } else {
     $('.showErrors').text(`There was an error: ${response.message}`);
   }

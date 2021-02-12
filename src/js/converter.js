@@ -9,6 +9,6 @@ export default class Converter {
       })
       .catch(function(error) {
         return error;
-      })
+      });
   }
 }
