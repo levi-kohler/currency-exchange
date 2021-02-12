@@ -13,7 +13,8 @@ function getElements(response) {
 }
 
 $(document).ready(function() {
-  $('#GBP').click(function() {
+  $('#convert').click(function() {
+    let currency = $('#USD').val();
     Converter.getConversion(currency)
     .then(function(response) {
       getElements(response);

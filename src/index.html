@@ -4,17 +4,17 @@
 </head>
 <body>
   <div class="container">
+
     <h1>Currency Converter</h1>
+
     <label for="USD">Enter an amount in USD:</label>
     <input id="USD" type="number">
 
-    <div class="dropdown">
-      <button class="dropbtn">Pick a Currency</button>
-
-      <div class="dropdown-content">
-        <a href="#GBP">British Pound</a>
-      </div>
-
+    <div class="form-group">
+      <label for="currency">Choose a currency:</label>
+      <select name="currency" id="currency"></select>
+        <option id="GBP" value="GBP">British Pounds</option>
+        <button class="btn-success" id="convert">Get Currency Conversion</button>
     </div>
     <div class="showErrors"></div>
     <div class="showTotal"></div>
