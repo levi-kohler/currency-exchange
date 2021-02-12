@@ -5,8 +5,8 @@ import './css/styles.css';
 import Converter from './js/converter.js';
 
 function displayConversion(response) {
-  if (response.result) {
-    $('.showTotal').text(`The total in GBP is ${response.result}`);
+  if (response) {
+    $('.showTotal').text(`The total in GBP is ${response.conversion_result}`);
   } else {
     $('.showErrors').text(`There was an error: ${response.message}`);
   }
