@@ -6,7 +6,7 @@ import Converter from './js/converter.js';
 
 function displayConversion(response) {
   if (response) {
-    $('.showTotal').text(`The total in GBP is ${response.conversion_result}`);
+    $('.showTotal').text(`The total in ${response.target_code} is ${response.conversion_result}`);
   } else {
     $('.showErrors').text(`There was an error: ${response.message}`);
   }
@@ -14,8 +14,8 @@ function displayConversion(response) {
 
 $(document).ready(function() {
   $('#convert').click(function() {
-    // let USD = $('#USD').val();
-    Converter.getConversion()
+    let input = $('#USD').val();
+    Converter.getConversion(input)
       .then(function(response) {
         displayConversion(response);
       });

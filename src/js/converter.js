@@ -1,6 +1,6 @@
 export default class Converter {
-  static getConversion() {
-    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/GBP/5`)
+  static getConversion(input) {
+    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/GBP/${input}`)
       .then(function(response) {
         if (!response.ok) {
           throw Error(response.statusText);
