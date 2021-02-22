@@ -15,7 +15,8 @@ function displayConversion(response) {
 $(document).ready(function() {
   $('#convert').click(function() {
     let input = $('#USD').val();
-    Converter.getConversion(input)
+    let currency = $('#currency').val();
+    Converter.getConversion(currency, input)
       .then(function(response) {
         displayConversion(response);
       });
