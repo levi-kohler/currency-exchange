@@ -28,14 +28,14 @@ _This application will take an input from the user which represents an amount in
 
 ## API Installation Requirements
 
+* _Add file named .env to the top level of project directory_
 * _Visit the ExchangeRate-API site. Input your email address and click the "Get Free Key" button_
 * _You'll be prompted to create an account with your email, first name and a password. Agree to the terms of use and click "Get Started!"_
-* _Take the API key generated for you, and insert it into the .env file at the top level of the directory_
+* _Take the API key generated for you, and type 'API_KEY={Your API key goes here}' in the .env file at the top level of the directory (replace {Your API goes here} with the API key that was generated for you)_
 
 ## Known Bugs
 
-* _Currently the returned amount is listed as undefined, this bug should be fixed shortly_
-* _Currently the user is unable to select which currency they would like to convert to, these will be added soon_
+* None that I know of.
 
 ## License
 
