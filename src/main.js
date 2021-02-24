@@ -11,11 +11,11 @@ function clearFields() {
 }
 
 function displayConversion(response, input, currency) {
-  if (response.result != 'success') {
-    $('.showErrors').text(`There was an error: ${response.error}`);
+  if (response.result === 'error') {
+    $('.showErrors').text(`There was an error: ${response["error-type"]}`);
   } else if (!input) {
     $('.showErrors').text(`Please enter an amount in USD.`);
-  } else if (!currency) {
+  } else if ('currency' === '') {
     $('.showErrors').text(`Please choose a currency to convert to.`);
   } else if(response) {
     $('.showTotal').text(`The total in ${response.target_code} is ${response.conversion_result}`);
